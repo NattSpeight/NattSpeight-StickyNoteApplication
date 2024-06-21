@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Welcome to the Sticky Notes and Bulletin Board Application</h1>
+    <p>
+        <a href="{% url 'note_list' %}" class="btn btn-primary">View Sticky Notes</a>
+        <a href="{% url 'post_list' %}" class="btn btn-secondary">View Bulletin Board Posts</a>
+    </p>
+</div>
+{% endblock %}

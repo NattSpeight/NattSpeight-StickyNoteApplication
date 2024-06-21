@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Posts</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a> by {{ post.author.name }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'post_create' %}" class="btn btn-primary mt-4">Create a new post</a>
+</div>
+{% endblock %}

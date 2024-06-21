@@ -1,0 +1,44 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.sticky-note {
+    background-color: #ffeb3b;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    width: auto;
+    max-width: 100%; 
+}
+
+.sticky-note h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: black; 
+}
+
+.sticky-note p {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.content-container {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.btn-group .btn {
+    width: 36px;  
+    height: 36px; 
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

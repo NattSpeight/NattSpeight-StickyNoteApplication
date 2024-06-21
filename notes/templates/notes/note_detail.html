@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="content-container">
+            <div class="sticky-note">
+                <h2>{{ note.title }}</h2>
+                <p>{{ note.content }}</p>
+                <a href="{% url 'note_edit' note.pk %}" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a>
+                <a href="{% url 'note_delete' note.pk %}" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a>
+            </div>
+            <a href="{% url 'note_list' %}" class="btn btn-secondary mt-3">Back to List</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="content-container">
+            <h1 class="text-center">Sticky Notes</h1>
+            <form method="get" action="" class="form-inline my-4">
+                <input type="text" name="search" class="form-control mr-sm-2" placeholder="Search notes...">
+                <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
+            <ul class="list-group">
+                {% for note in notes %}
+                <li class="list-group-item sticky-note">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h2><a href="{% url 'note_detail' note.pk %}">{{ note.title }}</a></h2>
+                            <p>{{ note.content|truncatewords:20 }}</p>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Actions">
+                            <a href="{% url 'note_edit' note.pk %}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="{% url 'note_delete' note.pk %}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'note_create' %}" class="btn btn-primary mt-4">Create a new note</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
